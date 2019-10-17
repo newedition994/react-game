@@ -2,11 +2,13 @@ import React from "react";
 
 import { TextField, Button } from "@material-ui/core";
 
-const Form = () => {
+const Form = ({ returnGuessToApp }) => {
   const onSubmit = event => {
     event.preventDefault();
 
     const guess = event.target.elements.guess.value;
+
+    returnGuessToApp(guess);
   };
   return (
     <form style={{ marginTop: "20px" }} onSubmit={onSubmit}>

@@ -6,6 +6,10 @@ import Form from "./components/Form";
 import "./App.css";
 
 class App extends React.Component {
+  updateAppState = guess => {
+    console.log(guess);
+  };
+
   render() {
     return (
       <Grid
@@ -20,7 +24,7 @@ class App extends React.Component {
               HOT or COLD
             </Typography>
             <Divider style={{ margin: "20px 0" }} />
-            <Form />
+            <Form returnGuessToApp={guess => this.updateAppState(guess)} />
           </Paper>
         </Grid>
       </Grid>
