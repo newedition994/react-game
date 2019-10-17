@@ -3,8 +3,13 @@ import React from "react";
 import { TextField, Button } from "@material-ui/core";
 
 const Form = () => {
+  const onSubmit = event => {
+    event.preventDefault();
+
+    const guess = event.target.elements.guess.value;
+  };
   return (
-    <form>
+    <form style={{ marginTop: "20px" }} onSubmit={onSubmit}>
       <TextField
         style={{ paddingBottom: "20px" }}
         fullWidth
