@@ -2,6 +2,7 @@ import React from "react";
 
 import { Grid, Typography, Paper, Divider } from "@material-ui/core";
 
+import Form from "./components/Form";
 import "./App.css";
 
 class App extends React.Component {
@@ -19,6 +20,7 @@ class App extends React.Component {
               HOT or COLD
             </Typography>
             <Divider style={{ margin: "20px 0" }} />
+            <Form />
           </Paper>
         </Grid>
       </Grid>
